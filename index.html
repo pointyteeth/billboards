@@ -16,7 +16,7 @@
         }
     </style>
 
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/interact.js/1.2.6/interact.min.js"></script>
+    <script type="text/javascript" src="interact.min.js"></script>
     <script type="text/javascript">
         // target elements with the "draggable" class
         interact('.draggable')
@@ -31,7 +31,6 @@
             },
             // enable autoScroll
             autoScroll: true,
-
             // call this function on every dragmove event
             onmove: dragMoveListener,
             });
@@ -52,8 +51,6 @@
             target.setAttribute('data-y', y);
         }
 
-        // this is used later in the resizing and gesture demos
-        window.dragMoveListener = dragMoveListener;
     </script>
 
 </head>
