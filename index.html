@@ -15,13 +15,17 @@
             margin: 0;
         }
 
+        #orientationMessage {
+            visibility: hidden;
+        }
+
         @media (orientation: portrait) {
-            body {
-                -webkit-transform: rotate(-90deg);
-                -moz-transform: rotate(-90deg);
-                -o-transform: rotate(-90deg);
-                -ms-transform: rotate(-90deg);
-                transform: rotate(-90deg);
+            #orientationMessage {
+                visibility: visible;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background: white;
             }
         }
     </style>
@@ -66,6 +70,9 @@
 </head>
 
 <body>
+    <div id="orientationMessage">
+        Please hold your phone horizontally <3
+    </div>
     <img class="draggable" src="cat.jpg" width=200px>
 </body>
 </html>
