@@ -15,35 +15,46 @@
         }
 
         body {
-            width: 92%;
-            height: 92%;
-            margin: 4%;
+            width: 100%;
+            height: 100%;
+            margin: 0;
             font-family: Hand, sans-serif;
         }
 
         h1 {
-            font-size: 48pt;
+            font-size: 72pt;
             letter-spacing: 4pt;
         }
 
         h2 {
-            font-size: 36pt;
+            font-size: 20pt;
             letter-spacing: 3pt;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        #main {
+            width: 92%;
+            height: 92%;
+            margin: 4%;
         }
 
         #orientationMessage {
             display: none;
+            width: 100%;
+            height: 100%;
+            padding: 4%;
+            z-index: 1000;
+            position: fixed;
+            background: green;
+            text-align: center;
         }
 
         @media (orientation: portrait) {
             #orientationMessage {
-                width: 100%;
-                height: 100%;
-                z-index: 1000;
-                position: fixed;
-                background: white;
                 display: flex;
-                text-align: center;
                 justify-content: center;
                 align-items: center;
             }
@@ -98,7 +109,11 @@
     <div id="orientationMessage">
         <h1>Please hold your phone horizontally <3</h1>
     </div>
-    <h2>Drag and drop stuff onto your billboard, tap to change color.</h2>
-    <img class="draggable" src="cat.jpg" width=200px>
+    <div id="main">
+        <h2>Drag and drop stuff onto your billboard.</h2>
+        <img src="images/board.svg" style="top: 30%; right: 5%;" width=45%">
+
+        <img class="draggable" src="images/hipster.svg" width=134px>
+    </div>
 </body>
 </html>
